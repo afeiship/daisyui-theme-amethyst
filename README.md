@@ -3,8 +3,8 @@
 A deep indigo/purple DaisyUI theme inspired by amethyst crystals, with an amber accent for warmth.
 
 <p align="center">
-  <img src="screenshot.png" alt="Amethyst Light" width="45%" />
-  <img src="screenshot-dark.png" alt="Amethyst Dark" width="45%" />
+  <img src="assets/screenshot.png" alt="Amethyst Light" width="45%" />
+  <img src="assets/screenshot-dark.png" alt="Amethyst Dark" width="45%" />
 </p>
 
 ## Install
