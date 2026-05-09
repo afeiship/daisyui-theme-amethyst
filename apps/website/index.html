@@ -137,8 +137,8 @@
     <section>
       <h2 class="text-2xl font-bold mb-4 border-b border-base-300 pb-2">Form Elements</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <!-- Inputs -->
-        <div class="space-y-3">
+        <!-- Left column: Inputs -->
+        <div class="flex flex-col gap-4">
           <label class="form-control w-full">
             <div class="label"><span class="label-text">Text Input</span></div>
             <input type="text" placeholder="Type here…" class="input input-bordered w-full" />
@@ -156,8 +156,8 @@
             <input type="text" placeholder="Accent styled" class="input input-bordered input-accent w-full" />
           </label>
         </div>
-        <!-- Select, Textarea, Checkbox, Radio, Toggle -->
-        <div class="space-y-3">
+        <!-- Right column: Select, Textarea, Checkbox/Radio, Toggle, Range -->
+        <div class="flex flex-col gap-4">
           <label class="form-control w-full">
             <div class="label"><span class="label-text">Select</span></div>
             <select class="select select-bordered w-full">
@@ -168,27 +168,36 @@
           </label>
           <label class="form-control w-full">
             <div class="label"><span class="label-text">Textarea</span></div>
-            <textarea class="textarea textarea-bordered" placeholder="Bio…"></textarea>
+            <textarea class="textarea textarea-bordered w-full" placeholder="Bio…"></textarea>
           </label>
-          <div class="flex flex-wrap gap-4 items-center">
+          <div class="form-control">
+            <div class="label"><span class="label-text">Checkbox & Radio</span></div>
+            <div class="flex flex-wrap gap-6 items-center">
+              <label class="label cursor-pointer gap-2">
+                <input type="checkbox" class="checkbox checkbox-primary" />
+                <span class="label-text">Checkbox</span>
+              </label>
+              <label class="label cursor-pointer gap-2">
+                <input type="radio" name="radio-1" class="radio radio-primary" checked />
+                <span class="label-text">Radio 1</span>
+              </label>
+              <label class="label cursor-pointer gap-2">
+                <input type="radio" name="radio-1" class="radio radio-secondary" />
+                <span class="label-text">Radio 2</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="label"><span class="label-text">Toggle</span></div>
             <label class="label cursor-pointer gap-2">
-              <input type="checkbox" class="checkbox checkbox-primary" />
-              <span class="label-text">Checkbox</span>
-            </label>
-            <label class="label cursor-pointer gap-2">
-              <input type="radio" name="radio-1" class="radio radio-primary" checked />
-              <span class="label-text">Radio 1</span>
-            </label>
-            <label class="label cursor-pointer gap-2">
-              <input type="radio" name="radio-1" class="radio radio-secondary" />
-              <span class="label-text">Radio 2</span>
+              <input type="checkbox" class="toggle toggle-primary" />
+              <span class="label-text">Enable notifications</span>
             </label>
           </div>
-          <div class="flex gap-4 items-center">
-            <input type="checkbox" class="toggle toggle-primary" />
-            <span>Toggle</span>
-            <input type="range" min="0" max="100" value="60" class="range range-primary w-32" />
-          </div>
+          <label class="form-control w-full">
+            <div class="label"><span class="label-text">Range</span></div>
+            <input type="range" min="0" max="100" value="60" class="range range-primary" />
+          </label>
         </div>
       </div>
     </section>
