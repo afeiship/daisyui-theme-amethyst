@@ -7,7 +7,13 @@
     "publish": true
   },
   "hooks": {
-    "before:init": ["npm run build"],
+    "before:init": [
+      "npm run build"
+    ],
     "after:release": "echo Successfully released ${name} v${version}!"
+  },
+  "github": {
+    "release": true,
+    "proxy": "http://127.0.0.1:9090"
   }
 }
