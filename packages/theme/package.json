@@ -1,0 +1,42 @@
+{
+  "name": "@jswork/daisyui-theme-amethyst",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Amethyst — a deep indigo/purple DaisyUI theme inspired by amethyst crystals",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./amethyst.css": "./themes/amethyst.css",
+    "./amethyst-dark.css": "./themes/amethyst-dark.css"
+  },
+  "files": [
+    "dist",
+    "themes"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "daisyui",
+    "daisyui-theme",
+    "tailwindcss",
+    "tailwind-theme",
+    "indigo",
+    "purple",
+    "amethyst"
+  ],
+  "peerDependencies": {
+    "daisyui": ">=4"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afeiship/daisyui-theme-amethyst"
+  },
+  "homepage": "https://github.com/afeiship/daisyui-theme-amethyst#readme"
+}

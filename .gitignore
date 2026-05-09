@@ -1,16 +1,9 @@
 node_modules
-bower_components
-coverage
-npm-debug.log
-yarn.lock
-package-lock.json
+dist
+docs
+*.log
 .DS_Store
-
-
-# vscode
 .vscode
 .history
 .idea
-
-# python cache
 __pycache__

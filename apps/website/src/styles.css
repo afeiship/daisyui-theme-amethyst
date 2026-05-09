@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import "@jswork/daisyui-theme-amethyst/amethyst.css";
+@import "@jswork/daisyui-theme-amethyst/amethyst-dark.css";

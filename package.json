@@ -1,8 +1,12 @@
 {
-  "name": "@jswork/daisyui-theme-amethyst",
-  "version": "1.0.0",
+  "name": "daisyui-theme-amethyst",
   "private": true,
   "type": "module",
-  "description": "A clean indigo/purple DaisyUI custom theme",
-  "license": "MIT"
+  "description": "Amethyst — a deep indigo/purple DaisyUI theme (monorepo root)",
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm --filter @jswork/daisyui-theme-amethyst build && pnpm --filter website build",
+    "dev": "pnpm --filter website dev",
+    "website:build": "pnpm --filter website build"
+  }
 }

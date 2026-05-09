@@ -1,0 +1,35 @@
+@plugin "daisyui/theme" {
+  name: "amethyst";
+  default: true;
+  color-scheme: light;
+
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(96% 0.01 260);
+  --color-base-300: oklch(92% 0.02 260);
+  --color-base-content: oklch(20% 0.04 260);
+  --color-primary: oklch(55% 0.28 270);
+  --color-primary-content: oklch(98% 0 0);
+  --color-secondary: oklch(65% 0.25 300);
+  --color-secondary-content: oklch(98% 0 0);
+  --color-accent: oklch(80% 0.2 85);
+  --color-accent-content: oklch(20% 0.04 85);
+  --color-neutral: oklch(35% 0.03 260);
+  --color-neutral-content: oklch(98% 0 0);
+  --color-info: oklch(65% 0.2 250);
+  --color-info-content: oklch(98% 0 0);
+  --color-success: oklch(60% 0.22 145);
+  --color-success-content: oklch(98% 0 0);
+  --color-warning: oklch(80% 0.2 85);
+  --color-warning-content: oklch(20% 0.04 85);
+  --color-error: oklch(60% 0.25 25);
+  --color-error-content: oklch(98% 0 0);
+
+  --radius-selector: 0.75rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
