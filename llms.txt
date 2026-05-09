@@ -60,35 +60,87 @@ Or use a DaisyUI theme controller:
 
 ### Light — amethyst
 
-| Token | Hex | Token | Hex |
-|---|---|---|---|
-| primary | #6366f1 | primary-content | #ffffff |
-| secondary | #a855f7 | secondary-content | #ffffff |
-| accent | #f59e0b | accent-content | #1a1a1a |
-| neutral | #374151 | neutral-content | #f9fafb |
-| base-100 | #ffffff | base-content | #1f2937 |
-| base-200 | #f3f4f6 | | |
-| base-300 | #e5e7eb | | |
-| info | #3b82f6 | info-content | #ffffff |
-| success | #22c55e | success-content | #ffffff |
-| warning | #eab308 | warning-content | #1a1a1a |
-| error | #ef4444 | error-content | #ffffff |
+| Token | Hex | oklch | Token | Hex | oklch |
+|---|---|---|---|---|---|
+| primary | #6366f1 | oklch(55% 0.28 270) | primary-content | #ffffff | oklch(98% 0 0) |
+| secondary | #a855f7 | oklch(65% 0.25 300) | secondary-content | #ffffff | oklch(98% 0 0) |
+| accent | #f59e0b | oklch(80% 0.2 85) | accent-content | #1a1a1a | oklch(20% 0.04 85) |
+| neutral | #374151 | oklch(35% 0.03 260) | neutral-content | #f9fafb | oklch(98% 0 0) |
+| base-100 | #ffffff | oklch(100% 0 0) | base-content | #1f2937 | oklch(20% 0.04 260) |
+| base-200 | #f3f4f6 | oklch(96% 0.01 260) | | | |
+| base-300 | #e5e7eb | oklch(92% 0.02 260) | | | |
+| info | #3b82f6 | oklch(65% 0.2 250) | info-content | #ffffff | oklch(98% 0 0) |
+| success | #22c55e | oklch(60% 0.22 145) | success-content | #ffffff | oklch(98% 0 0) |
+| warning | #eab308 | oklch(80% 0.2 85) | warning-content | #1a1a1a | oklch(20% 0.04 85) |
+| error | #ef4444 | oklch(60% 0.25 25) | error-content | #ffffff | oklch(98% 0 0) |
 
 ### Dark — amethyst_dark
 
-| Token | Hex | Token | Hex |
-|---|---|---|---|
-| primary | #818cf8 | primary-content | #1e1b4b |
-| secondary | #c084fc | secondary-content | #1e1b4b |
-| accent | #fbbf24 | accent-content | #1a1a1a |
-| neutral | #6b7280 | neutral-content | #f9fafb |
-| base-100 | #1f2937 | base-content | #f3f4f6 |
-| base-200 | #111827 | | |
-| base-300 | #0f172a | | |
-| info | #60a5fa | info-content | #1e3a5f |
-| success | #4ade80 | success-content | #14532d |
-| warning | #facc15 | warning-content | #422006 |
-| error | #f87171 | error-content | #450a0a |
+| Token | Hex | oklch | Token | Hex | oklch |
+|---|---|---|---|---|---|
+| primary | #818cf8 | oklch(70% 0.18 270) | primary-content | #1e1b4b | oklch(20% 0.08 270) |
+| secondary | #c084fc | oklch(72% 0.2 300) | secondary-content | #1e1b4b | oklch(20% 0.08 270) |
+| accent | #fbbf24 | oklch(85% 0.18 85) | accent-content | #1a1a1a | oklch(20% 0.04 85) |
+| neutral | #6b7280 | oklch(50% 0.02 260) | neutral-content | #f9fafb | oklch(98% 0 0) |
+| base-100 | #1f2937 | oklch(25% 0.03 260) | base-content | #f3f4f6 | oklch(95% 0.01 260) |
+| base-200 | #111827 | oklch(18% 0.03 260) | | | |
+| base-300 | #0f172a | oklch(14% 0.04 260) | | | |
+| info | #60a5fa | oklch(72% 0.16 250) | info-content | #1e3a5f | oklch(25% 0.08 250) |
+| success | #4ade80 | oklch(75% 0.2 145) | success-content | #14532d | oklch(25% 0.1 145) |
+| warning | #facc15 | oklch(85% 0.18 85) | warning-content | #422006 | oklch(25% 0.1 50) |
+| error | #f87171 | oklch(70% 0.2 25) | error-content | #450a0a | oklch(25% 0.1 25) |
+
+## Design Variables
+
+Both theme variants share these design configuration values:
+
+| Variable | Value | Description |
+|---|---|---|
+| `--radius-selector` | 0.75rem | Border radius for selectors (checkbox, radio, etc.) |
+| `--radius-field` | 0.5rem | Border radius for form fields (input, select, textarea) |
+| `--radius-box` | 0.75rem | Border radius for card-like components |
+| `--size-selector` | 0.25rem | Selector size modifier |
+| `--size-field` | 0.25rem | Field size modifier |
+| `--border` | 1px | Border width |
+| `--depth` | 1 | Shadow depth level |
+| `--noise` | 0 | Background noise texture |
+
+v4 JS config also includes: `--rounded-box`, `--rounded-btn`, `--rounded-badge`, `--animation-btn`, `--animation-input`, `--btn-text-case`, `--btn-focus-scale`, `--border-btn`.
+
+## File Structure
+
+```
+packages/theme/
+├── src/index.js          # v4 theme objects (hex colors + design vars)
+├── themes/
+│   ├── amethyst.css      # v5 CSS @plugin for light theme
+│   └── amethyst-dark.css # v5 CSS @plugin for dark theme
+├── build.js              # Build script (generates dist/ for v4 + CDN)
+└── package.json
+```
+
+### Exports
+
+| Path | Purpose |
+|---|---|
+| `@jswork/daisyui-theme-amethyst` | v4 JS objects (ESM + CJS) |
+| `@jswork/daisyui-theme-amethyst/amethyst.css` | v5 CSS @plugin (light) |
+| `@jswork/daisyui-theme-amethyst/amethyst-dark.css` | v5 CSS @plugin (dark) |
+
+## DaisyUI Component Compatibility
+
+This theme is fully compatible with all DaisyUI components. The color tokens map to component modifier classes as follows:
+
+| Token | Component color classes |
+|---|---|
+| primary | `btn-primary`, `alert-primary`, `badge-primary`, `progress-primary`, etc. |
+| secondary | `btn-secondary`, `alert-secondary`, `badge-secondary`, `progress-secondary`, etc. |
+| accent | `btn-accent`, `alert-accent`, `badge-accent`, `progress-accent`, etc. |
+| neutral | `btn-neutral`, `alert-neutral`, `badge-neutral`, `progress-neutral`, etc. |
+| info | `alert-info`, `badge-info`, `progress-info`, `status-info`, etc. |
+| success | `alert-success`, `badge-success`, `progress-success`, `status-success`, etc. |
+| warning | `alert-warning`, `badge-warning`, `progress-warning`, `status-warning`, etc. |
+| error | `alert-error`, `badge-error`, `progress-error`, `status-error`, etc. |
 
 ## Links
 
