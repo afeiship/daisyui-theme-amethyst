@@ -1,6 +1,6 @@
 {
   "name": "@jswork/daisyui-theme-amethyst",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Amethyst — a deep indigo/purple DaisyUI theme inspired by amethyst crystals",
   "main": "dist/index.js",
