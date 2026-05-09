@@ -1,5 +1,8 @@
 {
-  "name": "rails-module-schedule",
+  "name": "@jswork/github",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {}
+  "type": "module",
+  "description": "A clean indigo/purple DaisyUI custom theme",
+  "license": "MIT"
 }
